@@ -46,7 +46,7 @@ public class ContainerController {
 		containerService.addContainer(container.getLabel());
 
 		HttpHeaders headers = new HttpHeaders();
-		headers.setLocation(ucBuilder.path("/containers/{id}").buildAndExpand(container.getId()).toUri());
+		headers.setLocation(ucBuilder.path("/containers/{label}").buildAndExpand(container.getLabel()).toUri());
 		return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
 
 	}

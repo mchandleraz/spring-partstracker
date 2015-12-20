@@ -18,7 +18,7 @@ public class ContainerService {
     public List addContainer(String label) {
 
         int id = containers.size() + 1;
-        String json = "{id:" + id + ",label:" + label + "}";
+        String json = "{label:" + label + "}";
 
         containers.add(json);
 
